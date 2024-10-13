@@ -1,0 +1,151 @@
+﻿
+.visibilityclass
+{
+	display:none;
+	visibility:hidden;
+}
+.gridcolumn
+{
+	width:40px;
+}
+.grid
+{
+	font-family:Arial;
+	font-size:12px;
+	width:100%;
+}
+/* gridview styles */
+.grid .gridview
+{
+	width:100%;
+	border:solid 2px #5C9CCC;
+	empty-cells:show;
+	border-top-width:1px;
+}
+.grid .gridview TD,
+.grid .gridview .row TD, 
+.grid .gridview .altrow TD,
+.grid .gridview .edit-info TD
+{
+	padding:5px 4px;
+	/*text-align:left;
+	padding:5px 4px;
+	border-top:solid 1px #5C9CCC;
+	font-size:12px;*/
+}
+.grid .gridview .edit-info TD
+{
+	border-top:dashed 1px #5E8CC6;
+    font-weight:bold;
+    color:#333;
+}
+.grid .gridview TR.first TD
+{
+	border-top:none;
+}
+.grid .gridview TD.edit
+{
+	border-bottom:dashed 1px #5E8CC6;
+}     
+.grid .gridview .edit-info A
+{
+    font-weight:normal;
+}        
+.grid .gridview .row TD.command, 
+.grid .gridview .altrow TD.command,
+.grid .edit-info TD.command
+{
+	text-align:center;
+}  
+.grid .gridview
+{
+	font-size:12px;
+}  
+.grid .gridview .header TH
+{
+	border: 0px solid #aaaaaa; 
+    background: url("images/ui-bg_gloss-wave_55_5c9ccc_500x100.png") repeat-x scroll 50% 50% #5C9CCC;
+	color: #222222; 
+	font-weight: bold;
+	height:22px;
+	line-height:22px;
+	color:#FFFFFF;
+	font-weight:bold;
+	text-align:left;
+	font-size:12px;
+	white-space:nowrap;
+	vertical-align:top;
+	-moz-user-select: none;	
+	
+}
+.grid .gridview .header TD
+{
+	padding:0px;
+}
+.grid .gridview .edit
+{
+	padding:10px 5px;
+}
+.grid .gridview .edit,.grid .gridview .edit-info
+{
+	background-color:#F0F8FF;
+}    
+/* details styles */
+.grid .detailview
+{
+	width:100%;
+	empty-cells:show;
+	font-size:12px;
+}  
+.grid .detailview TH
+{
+	text-align:left;
+	padding:0px 10px;
+	color:#333;
+	font-size:12px;
+}    
+.grid .details .footer
+{
+	text-align:right;
+	padding:10px 10px 0px 0px;
+} 
+.grid .details .header
+{
+	text-align:left;
+	padding:0px 10px;
+	font-weight:bold;
+	display:none;
+	font-size:12px;
+}
+
+.grid
+{
+    font-family:Arial;
+    font-size:12px;
+    width:95%;
+}
+
+/* gridview styles */
+.grid .gridview
+{
+    empty-cells:show; 
+    font-size:12px;          
+}
+        
+.gridHeaderRow
+{
+    background: #cccccc url("images/ui-bg_gloss-wave_55_5c9ccc_500x100.png") 50% 50% repeat-x;
+    height:20;
+	line-height:20px;
+	color:#fff;
+	font-weight:bold;
+	text-align:left;
+	padding:0px 4px;
+	font-size:12px;
+	vertical-align:top;
+}
+
+tr.even
+{
+    background-color:#f8f8f8;
+}

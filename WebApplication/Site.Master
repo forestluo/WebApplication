@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>NLDB（数据库管理网站）—— <asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/grid.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/jquery-1.7.2.min.js") %>"></script>
+    <link type="text/css" href="<%= Page.ResolveClientUrl("~/Styles/jquery-ui-1.8.18.custom.css") %>" rel="stylesheet" />	
+	<script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/jquery-ui-1.8.18.custom.min.js") %>"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    NLDB（数据库管理网站）
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <%
+                    if (Request.IsAuthenticated) {
+                %>
+                        当前用户：<b><%: Page.User.Identity.Name %></b>！
+                        [ <%: Html.ActionLink("退出", "LogOff", "Account") %> ]
+                <%
+                    }
+                    else {
+                %> 
+                        [ <%: Html.ActionLink("登入", "Login", "Account") %> ]
+                <%
+                    }
+                %>
+            </div>
+            <div class="clear hideSkiplink">
+                <div id="NavigationMenu" class="menu" style="float: left;">
+                    <ul class="level1 static" tabindex="0" style="position: relative; width: auto; float: left;" role="menubar">              
+                        <li role="menuitem" class="static" style="position: relative; float: left;"><%: Html.ActionLink("首页", "Index", "Home", null, new { @class = "level1 static" })%></li>
+                        <li role="menuitem" class="static" style="position: relative; float: left;"><%: Html.ActionLink("关于", "About", "Home", null, new{@class="level1 static"})%></li>
+                        <%
+                            if (Request.IsAuthenticated)
+                            {
+                        %>
+                        <li role="menuitem" class="static" style="position: relative; float: left;"><%: Html.ActionLink("基础信息", "Index", "Basic", null, new { @class = "level1 static" })%></li>
+                        <li role="menuitem" class="static" style="position: relative; float: left;"><%: Html.ActionLink("语料管理", "Index", "Corpus", null, new { @class = "level1 static" })%></li>
+                        <li role="menuitem" class="static" style="position: relative; float: left;"><%: Html.ActionLink("规则管理", "Index", "Rule", null, new { @class = "level1 static" })%></li>
+                        <li role="menuitem" class="static" style="position: relative; float: left;"><%: Html.ActionLink("内容管理", "Index", "Content", null, new { @class = "level1 static" })%></li>
+                        <li role="menuitem" class="static" style="position: relative; float: left;"><%: Html.ActionLink("应用管理", "Index", "Application", null, new { @class = "level1 static" })%></li>
+                        <li role="menuitem" class="static" style="position: relative; float: left;"><%: Html.ActionLink("数据管理", "Admin", "Account", null, new { @class = "level1 static" })%></li>
+                        <%
+                            }
+                        %>
+                    </ul>
+                </div>
+				<div style="clear: left;"></div>
+                
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+</body>
+</html>
