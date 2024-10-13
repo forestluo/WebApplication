@@ -1,6 +1,6 @@
 # WebApplication
 
- 配合NLPDB v1的Web Application。
+ 配合NLDB v1的Web Application。
 
 ---
 
